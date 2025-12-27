@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Perissinotto Social's — Login</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="wrap">
+    <section class="card" role="region" aria-labelledby="login-title">
+      <header class="brand">
+        <!-- Logotipo tricolor inspirado na bandeira italiana (vertical) com monograma P elegante -->
+        <svg width="56" height="56" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="0"><stop offset="0" stop-color="#009246"/><stop offset="1" stop-color="#009246"/></linearGradient>
+            <linearGradient id="g2" x1="0" x2="0"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+            <linearGradient id="g3" x1="0" x2="0"><stop offset="0" stop-color="#CE2B37"/><stop offset="1" stop-color="#CE2B37"/></linearGradient>
+          </defs>
+          <rect x="6" y="6" width="108" height="108" rx="20" fill="#fff" />
+          <rect x="6" y="6" width="36" height="108" rx="18" fill="url(#g1)" />
+          <rect x="42" y="6" width="36" height="108" rx="18" fill="url(#g2)" />
+          <rect x="78" y="6" width="36" height="108" rx="18" fill="url(#g3)" />
+          <text x="60" y="74" text-anchor="middle" font-size="52" font-family="Playfair Display, serif" fill="#112">
+            P
+          </text>
+        </svg>
+        <div>
+          <h1 id="login-title">Perissinotto Social's</h1>
+          <p class="tagline">Conecte-se com pessoas e ideias — estilo italiano</p>
+        </div>
+      </header>
+
+      <form id="login-form" novalidate>
+        <div class="field">
+          <label for="user">Email ou usuário</label>
+          <input id="user" name="user" type="text" inputmode="email" autocomplete="username" required>
+          <span class="error" id="user-error" aria-live="polite"></span>
+        </div>
+
+        <div class="field">
+          <label for="password">Senha</label>
+          <div class="password-wrap">
+            <input id="password" name="password" type="password" autocomplete="current-password" minlength="6" required>
+            <button type="button" id="toggle-password" class="icon-btn" aria-label="Mostrar senha">👁️</button>
+          </div>
+          <span class="error" id="password-error" aria-live="polite"></span>
+        </div>
+
+        <div class="options">
+          <label class="remember"><input type="checkbox" id="remember"> Lembrar-me</label>
+          <a href="#" class="forgot">Esqueceu a senha?</a>
+        </div>
+
+        <button type="submit" id="submit" class="btn primary">Entrar</button>
+
+        <div class="divider"><span>ou</span></div>
+
+        <div class="social">
+          <button type="button" class="btn social google">Entrar com Google</button>
+          <button type="button" class="btn social facebook">Entrar com Facebook</button>
+        </div>
+
+        <p class="signup">Não tem conta? <a href="#">Criar conta</a></p>
+      </form>
+    </section>
+  </main>
+
+  <div id="toast" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
